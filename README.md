@@ -1,6 +1,3 @@
-<div align="center"><img src="assets/logo.png" width="350"></div>
-<img src="assets/demo.png" >
-
 ## Introduction
 Python code for Our paper (Highly differentiated target detection under extremely low-light conditions based on improved YOLOx model)
 Note: The original implementation of PyTorch version YOLOX, please vist: [MegEngine implementation](https://github.com/MegEngine/YOLOX).
@@ -10,15 +7,7 @@ Note: The original implementation of PyTorch version YOLOX, please vist: [MegEng
 * 【2023/10/21】 We optimize the training process under the low-light condition and obtain higher performance! See [notes](Coming soon) for more details.
 
 ## TODO: Update with exact module version
-numpy
-torch>=1.7
-opencv_python
-loguru
-tqdm
-torchvision
-thop
-ninja
-tabulate
+numpy,torch>=1.7,opencv_python,loguru,tqdm,torchvision,thop,ninja,tabulate
 
 ## Benchmark
 ### Table 1: Performance Comparison of Low-Light Image Detection
