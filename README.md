@@ -1,5 +1,5 @@
 ## Introduction
-Python code for Our paper (Highly differentiated target detection under extremely low-light conditions based on improved YOLOx model)
+Python code for our paper (Highly differentiated target detection under extremely low-light conditions based on improved YOLOx model)
 Note: The original implementation of PyTorch version YOLOX, please vist: [MegEngine implementation](https://github.com/MegEngine/YOLOX).
 
 ## Updates!!
