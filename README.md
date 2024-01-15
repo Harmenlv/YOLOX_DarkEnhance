@@ -212,7 +212,7 @@ If you use YOLOX in your research, please cite our work by using the following B
 ```latex
 @article{yan2022highly,
   title={Highly Differentiated Target Detection Method Based on YOLOv3 Model Under Extremely Low Light Conditions},
-  author={Yan, Chenxu and Shao, Haijian and Zhai, Patrick and Jiang, Yingtao and Deng, Xing},
+  author={Yan, Chenxu and Shao, Haijian and Deng, Xing},
   journal={Available at SSRN 4102943},
   year={2022}
 }
