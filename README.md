@@ -2,6 +2,7 @@
 <img src="assets/demo.png" >
 
 ## Introduction
+
 YOLOX is an anchor-free version of YOLO, with a simpler design but better performance! It aims to bridge the gap between research and industrial communities.
 For more details, please refer to our [report on Arxiv](https://arxiv.org/abs/2107.08430).
 
@@ -12,59 +13,47 @@ This repo is an implementation of PyTorch version YOLOX, there is also a [MegEng
 ## Updates!!
 * 【2022/04/14】 We suport jit compile op.
 * 【2021/08/19】 We optimize the training process with **2x** faster training and **~1%** higher performance! See [notes](docs/updates_note.md) for more details.
-* 【2021/08/05】 We release [MegEngine version YOLOX](https://github.com/MegEngine/YOLOX).
-* 【2021/07/28】 We fix the fatal error of [memory leak](https://github.com/Megvii-BaseDetection/YOLOX/issues/103)
-* 【2021/07/26】 We now support [MegEngine](https://github.com/Megvii-BaseDetection/YOLOX/tree/main/demo/MegEngine) deployment.
-* 【2021/07/20】 We have released our technical report on [Arxiv](https://arxiv.org/abs/2107.08430).
 
-## Coming soon
-- [ ] YOLOX-P6 and larger model.
-- [ ] Objects365 pretrain.
-- [ ] Transformer modules.
-- [ ] More features in need.
+## 
+# TODO: Update with exact module version
+numpy
+torch>=1.7
+opencv_python
+loguru
+tqdm
+torchvision
+thop
+ninja
+tabulate
 
 ## Benchmark
+### Table 1: Performance Comparison of Low-Light Image Detection
 
-#### Standard Models.
+| Methods          | Proposed | YOLOx | YOLOv4 | RFBnet | Mobilenet-SSD | Faster-RCNN | M2det   |
+|------------------|----------|-------|--------|--------|---------------|-------------|---------|
+| Dark image       | 70.96    | 67.41 | 54.96  | 64.06  | 53.91         | 65.19       | 65.09   |
+| Dong et al.[1]   | 72.15 | 68.47 | 47.75  | 64.09  | 36.52         | 62.71       | 62.20   |
+| This paper       | 76.86    | 73.31 | 69.83  | 73.79  | 63.26         | 62.75       | 72.32   |
 
-|Model |size |mAP<sup>val<br>0.5:0.95 |mAP<sup>test<br>0.5:0.95 | Speed V100<br>(ms) | Params<br>(M) |FLOPs<br>(G)| weights |
-| ------        |:---: | :---:    | :---:       |:---:     |:---:  | :---: | :----: |
-|[YOLOX-s](./exps/default/yolox_s.py)    |640  |40.5 |40.5      |9.8      |9.0 | 26.8 | [github](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.pth) |
-|[YOLOX-m](./exps/default/yolox_m.py)    |640  |46.9 |47.2      |12.3     |25.3 |73.8| [github](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_m.pth) |
-|[YOLOX-l](./exps/default/yolox_l.py)    |640  |49.7 |50.1      |14.5     |54.2| 155.6 | [github](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_l.pth) |
-|[YOLOX-x](./exps/default/yolox_x.py)   |640   |51.1 |**51.5**  | 17.3    |99.1 |281.9 | [github](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_x.pth) |
-|[YOLOX-Darknet53](./exps/default/yolov3.py)   |640  | 47.7 | 48.0 | 11.1 |63.7 | 185.3 | [github](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_darknet.pth) |
+### Table 2: Analysis of Average Precision (AP) of YOLOx in Various Lighting Conditions
 
-<details>
-<summary>Legacy models</summary>
+| Image            | AP@0.50:0.95 | AP@0.50 | AP@0.75 | AP@S   | AP@M   | AP@L   |
+|------------------|--------------|---------|---------|--------|--------|--------|
+| Original image   | 0.504        | 0.690   | 0.547   | 0.325  | 0.561  | 0.669  |
+| Dark image       | 0.404        | 0.592   | 0.426   | 0.196  | 0.448  | 0.597  |
+| This paper       | 0.456        | 0.643   | 0.489   | 0.239  | 0.508  | 0.650  |
 
-|Model |size |mAP<sup>test<br>0.5:0.95 | Speed V100<br>(ms) | Params<br>(M) |FLOPs<br>(G)| weights |
-| ------        |:---: | :---:       |:---:     |:---:  | :---: | :----: |
-|[YOLOX-s](./exps/default/yolox_s.py)    |640  |39.6      |9.8     |9.0 | 26.8 | [onedrive](https://megvii-my.sharepoint.cn/:u:/g/personal/gezheng_megvii_com/EW62gmO2vnNNs5npxjzunVwB9p307qqygaCkXdTO88BLUg?e=NMTQYw)/[github](https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_s.pth) |
-|[YOLOX-m](./exps/default/yolox_m.py)    |640  |46.4      |12.3     |25.3 |73.8| [onedrive](https://megvii-my.sharepoint.cn/:u:/g/personal/gezheng_megvii_com/ERMTP7VFqrVBrXKMU7Vl4TcBQs0SUeCT7kvc-JdIbej4tQ?e=1MDo9y)/[github](https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_m.pth) |
-|[YOLOX-l](./exps/default/yolox_l.py)    |640  |50.0  |14.5 |54.2| 155.6 | [onedrive](https://megvii-my.sharepoint.cn/:u:/g/personal/gezheng_megvii_com/EWA8w_IEOzBKvuueBqfaZh0BeoG5sVzR-XYbOJO4YlOkRw?e=wHWOBE)/[github](https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_l.pth) |
-|[YOLOX-x](./exps/default/yolox_x.py)   |640  |**51.2**      | 17.3 |99.1 |281.9 | [onedrive](https://megvii-my.sharepoint.cn/:u:/g/personal/gezheng_megvii_com/EdgVPHBziOVBtGAXHfeHI5kBza0q9yyueMGdT0wXZfI1rQ?e=tABO5u)/[github](https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_x.pth) |
-|[YOLOX-Darknet53](./exps/default/yolov3.py)   |640  | 47.4      | 11.1 |63.7 | 185.3 | [onedrive](https://megvii-my.sharepoint.cn/:u:/g/personal/gezheng_megvii_com/EZ-MV1r_fMFPkPrNjvbJEMoBLOLAnXH-XKEB77w8LhXL6Q?e=mf6wOc)/[github](https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_darknet53.pth) |
+### Table 3: Augmented Reality (AR) of YOLOx in Various Illumination Conditions
 
-</details>
+| Image            | AR@0.50:0.95 | AR@0.50 | AR@0.75 | AR@S   | AR@M   | AR@L   |
+|------------------|--------------|---------|---------|--------|--------|--------|
+| Original image   | 0.379        | 0.614   | 0.653   | 0.468  | 0.712  | 0.825  |
+| Dark image       | 0.327        | 0.514   | 0.549   | 0.334  | 0.489  | 0.687  |
+| This paper       | 0.354        | 0.566   | 0.603   | 0.371  | 0.505  | 0.669  |
 
-#### Light Models.
+Reference
+[1] Xuan Dong et al., "Fast efficient algorithm for enhancement of low lighting video," 2011 IEEE International Conference on Multimedia and Expo, Barcelona, 2011, pp. 1-6, doi: 10.1109/ICME.2011.6012107.
 
-|Model |size |mAP<sup>val<br>0.5:0.95 | Params<br>(M) |FLOPs<br>(G)| weights |
-| ------        |:---:  |  :---:       |:---:     |:---:  | :---: |
-|[YOLOX-Nano](./exps/default/yolox_nano.py) |416  |25.8  | 0.91 |1.08 | [github](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_nano.pth) |
-|[YOLOX-Tiny](./exps/default/yolox_tiny.py) |416  |32.8 | 5.06 |6.45 | [github](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_tiny.pth) |
-
-
-<details>
-<summary>Legacy models</summary>
-
-|Model |size |mAP<sup>val<br>0.5:0.95 | Params<br>(M) |FLOPs<br>(G)| weights |
-| ------        |:---:  |  :---:       |:---:     |:---:  | :---: |
-|[YOLOX-Nano](./exps/default/yolox_nano.py) |416  |25.3  | 0.91 |1.08 | [github](https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_nano.pth) |
-|[YOLOX-Tiny](./exps/default/yolox_tiny.py) |416  |32.8 | 5.06 |6.45 | [github](https://github.com/Megvii-BaseDetection/storage/releases/download/0.0.1/yolox_tiny_32dot8.pth) |
-
-</details>
 
 ## Quick Start
 
