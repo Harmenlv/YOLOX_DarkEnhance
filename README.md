@@ -2,20 +2,14 @@
 <img src="assets/demo.png" >
 
 ## Introduction
-
-YOLOX is an anchor-free version of YOLO, with a simpler design but better performance! It aims to bridge the gap between research and industrial communities.
-For more details, please refer to our [report on Arxiv](https://arxiv.org/abs/2107.08430).
-
-This repo is an implementation of PyTorch version YOLOX, there is also a [MegEngine implementation](https://github.com/MegEngine/YOLOX).
-
-<img src="assets/git_fig.png" width="1000" >
+Python code for Our paper (Highly differentiated target detection under extremely low-light conditions based on improved YOLOx model)
+Note: The original implementation of PyTorch version YOLOX, please vist: [MegEngine implementation](https://github.com/MegEngine/YOLOX).
 
 ## Updates!!
-* 【2022/04/14】 We suport jit compile op.
-* 【2021/08/19】 We optimize the training process with **2x** faster training and **~1%** higher performance! See [notes](docs/updates_note.md) for more details.
+* 【2022/01/20】 We suport jit compile op.[notes]([docs/updates_note.md](https://assets.researchsquare.com/files/rs-1212268/v1_covered.pdf?c=1642711187))
+* 【2023/10/21】 We optimize the training process under the low-light condition and obtain higher performance! See [notes](Coming soon) for more details.
 
-## 
-# TODO: Update with exact module version
+## TODO: Update with exact module version
 numpy
 torch>=1.7
 opencv_python
@@ -53,7 +47,6 @@ tabulate
 
 Reference
 [1] Xuan Dong et al., "Fast efficient algorithm for enhancement of low lighting video," 2011 IEEE International Conference on Multimedia and Expo, Barcelona, 2011, pp. 1-6, doi: 10.1109/ICME.2011.6012107.
-
 
 ## Quick Start
 
