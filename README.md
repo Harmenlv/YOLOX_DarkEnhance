@@ -45,7 +45,7 @@ tabulate
 | Dark image       | 0.327        | 0.514   | 0.549   | 0.334  | 0.489  | 0.687  |
 | This paper       | 0.354        | 0.566   | 0.603   | 0.371  | 0.505  | 0.669  |
 
-Reference
+## Reference
 [1] Xuan Dong et al., "Fast efficient algorithm for enhancement of low lighting video," 2011 IEEE International Conference on Multimedia and Expo, Barcelona, 2011, pp. 1-6, doi: 10.1109/ICME.2011.6012107.
 
 ## 以下安装和开始部分，需要修改
