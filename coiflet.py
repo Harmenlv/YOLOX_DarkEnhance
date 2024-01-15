@@ -1,4 +1,4 @@
-#读取图片
+# Read the image
 import os
 import matplotlib.pyplot as plt
 import pywt
@@ -29,6 +29,3 @@ for filename in os.listdir("F:\Datasets\VOC07+12\JPEGImages"):
                 cv2.imwrite("F:\Datasets\VOC07+12/3" + "/" + filename, a*255)
             if i == 3:
                 cv2.imwrite("F:\Datasets\VOC07+12/4" + "/" + filename, a*255)
-
-
-
