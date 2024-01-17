@@ -3,7 +3,7 @@
 * Note: The original implementation of PyTorch version YOLOX, please vist: [MegEngine implementation](https://github.com/MegEngine/YOLOX).
 
 ## Updates
-* 【2022/01/20】 We suport jit compile op.[SSRN](https://assets.researchsquare.com/files/rs-1212268/v1_covered.pdf?c=1642711187)
+* 【2022/01/20】 The intial version on YOLOv3 [SSRN](https://assets.researchsquare.com/files/rs-1212268/v1_covered.pdf?c=1642711187)
 * 【2023/10/21】 We optimize the training process under the low-light condition and obtain higher performance! See [notes](Coming soon) for more details.
 
 ## TODO: Update with exact module version
