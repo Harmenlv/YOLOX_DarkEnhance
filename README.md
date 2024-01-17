@@ -42,10 +42,6 @@ numpy,torch>=1.7,opencv_python,loguru,tqdm,torchvision,thop,ninja,tabulate
 * [1] Xuan Dong et al., "Fast efficient algorithm for enhancement of low lighting video," 2011 IEEE International Conference on Multimedia and Expo, Barcelona, 2011, pp. 1-6, doi: 10.1109/ICME.2011.6012107.
 * [2] Ge, Z., Liu, S., Wang, F., Li, Z., & Sun, J. (2021). Yolox: Exceeding yolo series in 2021. arXiv preprint arXiv:2107.08430.
 
-*  [Training on custom data](docs/train_custom_data.md)
-*  [Manipulating training image size](docs/manipulate_training_image_size.md)
-*  [Freezing model](docs/freeze_module.md)
-
 </details>
 
 ## Cite YOLOX
