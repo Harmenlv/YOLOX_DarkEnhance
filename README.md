@@ -189,6 +189,13 @@ If you use YOLOX in your research, please cite our work by using the following B
   journal={Available at SSRN 4102943},
   year={2022}
 }
+
+@article{shao2024highly,
+  title={Highly differentiated target detection under extremely low-light conditions based on improved YOLOx model},
+  author={Haijian Shao, Chenxu Yan, Xing Deng, Lihao Qiu, Yingtao Jiang},
+  journal={Journal of Electronic Imaging},
+  year={2024}
+}
 ```
 ## In memory of Dr. Jian Sun
 Without the guidance of [Dr. Sun Jian](http://www.jiansun.org/), YOLOX would not have been released and open sourced to the community.
