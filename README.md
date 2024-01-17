@@ -3,8 +3,8 @@
 * Note: The original implementation of PyTorch version YOLOX, please vist: [MegEngine implementation](https://github.com/MegEngine/YOLOX).
 
 ## Updates
-* 【2022/01/20】 The intial version on YOLOv3 [SSRN](https://assets.researchsquare.com/files/rs-1212268/v1_covered.pdf?c=1642711187)
-* 【2023/10/21】 We optimize the training process under the low-light condition and obtain higher performance! See [notes](Coming soon) for more details.
+* 【2022/01/20】 The initial version is based on YOLOv3 for object detection under low-light conditions [SSRN](https://assets.researchsquare.com/files/rs-1212268/v1_covered.pdf?c=1642711187)
+* 【2023/10/21】 We optimized the training process using YOLOx with a larger dataset under low-light conditions, resulting in higher performance. See [notes](Coming soon) for more details.
 
 ## TODO: Update with exact module version
 numpy,torch>=1.7,opencv_python,loguru,tqdm,torchvision,thop,ninja,tabulate
