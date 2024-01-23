@@ -48,16 +48,9 @@ numpy,torch>=1.7,opencv_python,loguru,tqdm,torchvision,thop,ninja,tabulate
 If you use YOLOX in your research, please cite our work by using the following BibTeX entry:
 
 ```latex
-@article{yan2022highly,
-  title={Highly Differentiated Target Detection Method Based on YOLOv3 Model Under Extremely Low Light Conditions},
-  author={Chenxu Yan, Haijian Shao, Xing Deng},
-  journal={Available at SSRN 4102943},
-  year={2022}
-}
-
 @article{shao2024highly,
   title={Highly differentiated target detection under extremely low-light conditions based on improved YOLOx model},
-  author={Haijian Shao, Chenxu Yan, Xing Deng, Lihao Qiu, Yingtao Jiang},
+  author={Haijian Shao, Chenxu Yan, Xing Deng},
   journal={Journal of Electronic Imaging},
   year={2024}
 }
