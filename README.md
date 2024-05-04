@@ -56,5 +56,5 @@ If you use YOLOX in your research, please cite our work by using the following B
   year={2024}
 }
 ```
-Feel free to quote articles from my Google Scholar profile: [Google Scholar]: [Link]([https://github.com/MegEngine/YOLOX](https://scholar.google.com/citations?user=d3mvChQAAAAJ&hl=en))
+Feel free to quote articles from my Google Scholar profile: [Google Scholar]: [Link](https://github.com/MegEngine/YOLOX](https://scholar.google.com/citations?user=d3mvChQAAAAJ&hl=en)
 
