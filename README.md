@@ -51,11 +51,15 @@ If you use YOLOX in your research, please cite our work by using the following B
 @article{shao2024highly,
   title={Highly differentiated target detection under extremely low-light conditions based on improved YOLOx model},
   author={Haijian Shao, Suqin Lei, Chenxu Yan, Xing Deng, Yunsong Qi},
+  vol={140},
+  no={2},
+  pages={1507-1537},
   journal={CMES-Computer Modeling in Engineering & Sciences},
   doi={10.32604/cmes.2024.050140},
   year={2024}
 }
 ```
+Free Download: [Link](https://www.techscience.com/CMES/v140n2/56574)
 Feel free to quote articles from my Google Scholar profile: [Google Scholar]: 
 [Link](https://scholar.google.com/citations?user=d3mvChQAAAAJ&hl=en)
 
